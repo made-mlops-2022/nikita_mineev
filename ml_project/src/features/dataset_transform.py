@@ -11,8 +11,9 @@ def dataset_fit_transform(X_train: pd.DataFrame,
                           Xs: Iterable[pd.DataFrame] = None) -> tuple:
     Xs = list() if Xs is None else Xs
     num_features = [colname for colname in X_train.columns.tolist()
-                     if colname not in target_features + cat_features]
-    transformer = Normalizer(num_features=num_features, cat_features=cat_features)
+                    if colname not in target_features + cat_features]
+    transformer = Normalizer(num_features=num_features,
+                             cat_features=cat_features)
     transformer.fit(X_train)
     with open(transformer_save_path, "wb") as f:
         pickle.dump(transformer, f)

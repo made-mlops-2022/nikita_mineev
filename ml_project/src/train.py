@@ -16,7 +16,7 @@ cs.store(name="train", node=Config)
 
 
 @hydra.main(version_base=None, config_path="../configs", config_name="config")
-def train(cfg : Config) -> None:
+def train(cfg: Config) -> None:
     s_time = time.time()
     logger.info("Start Training...")
     logger.info("Loading dataset...")

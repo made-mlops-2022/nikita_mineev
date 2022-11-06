@@ -16,6 +16,7 @@ class FeaturesConfig:
     numerical_features: list[Union[int, str]]
     target_features: list[Union[int, str]]
 
+
 @dataclass(frozen=True)
 class SplitConfig:
     train_size: int
