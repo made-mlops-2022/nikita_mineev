@@ -2,7 +2,7 @@ _target_: config_schemes.dataset.DatasetConfig
 name: "Heart Disease Cleveland UCI"
 source: "https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci"
 path:
-  raw:
+  raw: "../data/raw/heart_cleveland_upload.csv"
   train: "../data/train/heart_cleveland_upload.csv"
   val:
   test: "../data/test/heart_cleveland_test.csv"

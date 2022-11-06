@@ -20,18 +20,19 @@ python3 visualization/create_report.py [dataset.path.raw=<path-to-csv>
 ### Run model training
 ```bash
 cd ml_project/src
-python3 train.py [dataset.path.train=<path-to-csv>
+python3 train.py [dataset.path.train=<path-to-train-csv-dataset>
                   model=<catboost or catboost_w_transformer> 
-                  model.save_path=<model-save-path> 
-                  model.transformer_save_path=<if catboost_w_transformer choosen>]
+                  model.save_path=<where-to-save-model> 
+                  model.transformer_save_path=<if-catboost_w_transformer-chosen>]
 ```
 
 ### Compute model predictions
 ```bash
 cd ml_project/src
-python3 predict.py [dataset.path.test=<path-to-csv> 
-                    model.save_path=<model-save-path> 
-                    model.transformer_save_path=<if catboost_w_transformer choosen>]
+python3 predict.py [dataset.path.test=<path-to-test-csv-dataset> 
+                    model.save_path=<from-where-model-must-be-loaded> 
+                    model.transformer_save_path=<if catboost_w_transformer choosen>
+                    model.save_predict_path=<where-to-save-predictions-csv>]
 ```
 
 
