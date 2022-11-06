@@ -1,0 +1,19 @@
+_target_: config_schemes.dataset.DatasetConfig
+name: "Heart Disease Cleveland UCI"
+source: "https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci"
+path:
+  raw:
+  train: "../data/train/heart_cleveland_upload.csv"
+  val:
+  test: "../data/test/heart_cleveland_test.csv"
+features:
+  categorical_features:
+    ['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'ca', 'thal']
+  numerical_features:
+    ['age', 'trestbps', 'chol', 'thalach', 'oldpeak']
+  target_features:
+    ["condition"]
+split:
+  train_size: 222
+  val_size: 37
+  test_size: 38

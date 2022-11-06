@@ -3,6 +3,38 @@ ML Project
 
 mlops course homework1
 
+
+### Installation
+```
+pip installl -r requirements.txt
+```
+
+
+### Create eda report
+```bash
+cd ml_project/src
+python3 visualization/create_report.py [dataset.path.raw=<path-to-csv> 
+                                        eda_reports_dir=<path-to-dir>]
+```
+
+### Run model training
+```bash
+cd ml_project/src
+python3 train.py [dataset.path.train=<path-to-csv>
+                  model=<catboost or catboost_w_transformer> 
+                  model.save_path=<model-save-path> 
+                  model.transformer_save_path=<if catboost_w_transformer choosen>]
+```
+
+### Compute model predictions
+```bash
+cd ml_project/src
+python3 predict.py [dataset.path.test=<path-to-csv> 
+                    model.save_path=<model-save-path> 
+                    model.transformer_save_path=<if catboost_w_transformer choosen>]
+```
+
+
 Project Organization
 ------------
 
