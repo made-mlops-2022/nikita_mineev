@@ -1,0 +1,7 @@
+_target_: config_schemes.Config
+defaults:
+  - _self_
+  - dataset: heart_disease
+  - model: catboost
+random_state: 1488
+eda_reports_dir: "../reports"

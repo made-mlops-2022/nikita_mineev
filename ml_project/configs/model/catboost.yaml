@@ -1,0 +1,17 @@
+_target_: config_schemes.model.ModelConfig
+type: "CatBoost"
+params: {
+    iterations: 400,
+    learning_rate: 0.05,
+    loss_function: "Logloss",
+    eval_metric: "F1",
+    random_seed: 42,
+    use_best_model: True,
+    verbose: 50,
+    task_type: "CPU",
+    metric_period: 50,
+}
+transform_dataset: False
+save_path: "../models/catboost.model"
+transformer_save_path:
+save_predict_path: "../models/catboost_predictions.csv"
